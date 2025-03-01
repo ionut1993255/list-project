@@ -53,5 +53,9 @@ user experience.
 
 `List Project` is a lightweight yet powerful to-do list app following best practices in `clean code` and `OOP`.  
 With `TypeScript` and the `Singleton Pattern`, it offers a scalable and maintainable codebase.
+
+Here you can see my project in action: https://ionut-list-project.netlify.app/
+
 Check out the custom favicon 😉
+
 Give it a try and keep your tasks organized! ✅
