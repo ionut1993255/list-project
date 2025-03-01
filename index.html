@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>List Project</title>
+
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="stylesheet" href="/src/css/style.css">
+
+    <script type="module" src="/src/main.ts" defer></script>
+</head>
+
+<body>
+<main>
+    <section class="new-item-entry">
+        <form class="new-item-entry__form" id="itemEntryForm">
+            <input type="text" class="new-item-entry__input" id="newItem" maxlength="40" autocomplete="off"
+                   placeholder="Add item"
+            />
+            <button type="submit" class="button new-item-entry__button">+</button>
+        </form>
+    </section>
+
+    <section class="list-container">
+        <header class="list-title">
+            <h2>List</h2>
+            <button class="button list-title__button" id="clearItemsButton">Clear</button>
+        </header>
+
+        <hr/>
+
+        <p class="no-items-message" id="noItemsMessage">No items found!</p>
+        <ul id="listItems"></ul>
+    </section>
+</main>
+</body>
+
+</html>

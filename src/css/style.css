@@ -1,0 +1,188 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: 'Poppins', sans-serif;
+}
+
+input,
+button {
+    font: inherit;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    color: whitesmoke;
+    background-color: #333;
+    padding: 1rem;
+}
+
+main {
+    display: flex;
+    flex-flow: column nowrap;
+    flex-grow: 1;
+    width: 100%;
+    max-width: 800px;
+    margin: auto;
+}
+
+section {
+    padding: 0.5rem;
+    border: 1px solid whitesmoke;
+    border-radius: 10px;
+}
+
+.button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 48px;
+    min-height: 48px;
+    border: 1px solid whitesmoke;
+    border-radius: 10px;
+}
+
+.button:hover {
+    cursor: pointer;
+}
+
+.new-item-entry {
+    position: sticky;
+    top: 0;
+    margin-bottom: 1rem;
+}
+
+.new-item-entry__form {
+    display: flex;
+    gap: 0.25rem;
+    font-size: 1.5rem;
+}
+
+.new-item-entry__input {
+    flex-grow: 1;
+    width: calc(100% - (0.25rem + 48px));
+    color: #333;
+    padding: 0.5em;
+    border: none;
+    border-radius: 10px;
+}
+
+.new-item-entry__input:focus {
+    outline: none;
+}
+
+.new-item-entry__button {
+    color: #333;
+    background-color: whitesmoke;
+    padding: 0.75em;
+}
+
+.new-item-entry__button:hover {
+    color: limegreen;
+}
+
+.list-container {
+    display: flex;
+    flex-flow: column;
+    flex-grow: 1;
+    gap: 1rem;
+    font-size: 1.5rem;
+}
+
+.list-title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.list-title__button {
+    color: whitesmoke;
+    background-color: transparent;
+    padding: 0.25em 0.5em;
+}
+
+.list-title__button:hover {
+    color: #333;
+    background-color: whitesmoke;
+}
+
+.no-items-message {
+    padding-top: 1em;
+    text-align: center;
+}
+
+#listItems {
+    display: flex;
+    flex-flow: column nowrap;
+    flex-grow: 1;
+    list-style-type: none;
+}
+
+.item {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+    padding-top: 1em;
+}
+
+.item > input[type="checkbox"] {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.5rem;
+    height: 2.5rem;
+    background-color: whitesmoke;
+    border-radius: 5px;
+    appearance: none;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.item > input[type="checkbox"]:checked {
+    position: relative;
+    background-color: limegreen;
+    border-color: limegreen;
+}
+
+.item > input[type="checkbox"]:checked::after {
+    display: block;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: whitesmoke;
+    content: "✔";
+    text-align: center;
+}
+
+.item > input[type="checkbox"]:checked + label {
+    text-decoration: line-through;
+}
+
+.item > label {
+    flex-grow: 1;
+    word-break: break-all;
+}
+
+.item > button {
+    color: #333;
+}
+
+.item > button:hover {
+    color: red;
+}
+
+@media (min-width: 768px) {
+    section {
+        padding: 1rem;
+    }
+
+    .new-item-entry__form {
+        gap: 0.5rem;
+    }
+}
